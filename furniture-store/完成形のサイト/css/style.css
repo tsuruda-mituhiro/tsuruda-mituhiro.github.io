@@ -1,0 +1,155 @@
+@charset "UTF-8";
+
+
+/* 変数の登録 */
+:root{
+--header_color:#eeaa4c;
+--nav_color:#efa670;
+--contents_color1:#efde70;
+--contents_color2:#70a3ef;
+}
+
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+ul{list-style: none;}
+a{text-decoration: none;}
+img{
+vertical-align: bottom;
+max-width: 100%;}
+
+body{
+color: #222;
+font-family: "Oleo Script", system-ui;
+font-weight: 400;
+font-style: normal;
+}
+
+/* ヘッダー部分 */
+header{
+background-color: var(--header_color);
+padding: 30px 0;
+}
+
+header>h1{
+text-align: center;
+font-size: 60px;
+font-family: "Oleo Script", system-ui;
+font-weight: 400;
+font-style: normal;
+}
+
+/* ナビゲーション */
+
+#g-nav{
+height: 50px;
+background-color: var(--nav_color);
+}
+
+#g-nav ul{
+display: flex;
+justify-content: center;
+align-items: center;
+height: 50px;
+gap: 0 30px;
+}
+
+#g-nav a{
+color: #222;
+padding: 10px 30px;
+font-family: "Oleo Script", system-ui;
+font-weight: 400;
+font-style: normal;
+font-size: 24px;
+}
+
+#g-nav a:hover{
+text-decoration: underline 3px #fa7000;
+text-underline-offset: 2px;
+}
+
+/* main 部分 */
+main{
+max-width: 1366px;
+margin: 0 auto 10px;
+padding: 0 10px;
+}
+
+.content-wrapper{
+display: flex;
+gap: 0 10px;
+margin-bottom: 10px;
+}
+
+.content-wrapper:nth-of-type(odd){
+flex-direction: row-reverse;
+}
+
+.content-wrapper:nth-of-type(2)>.content-text{
+background-color:var(--contents_color2);
+}
+
+/* contents-text 部分 */
+.content-text{
+width: calc((100% - 20px) / 3);
+background-color: var(--contents_color1);
+padding: 150px 20px 20px;
+text-align: center;
+}
+
+.content-text>h2{
+font-size: 36px;
+margin-bottom: 20px;
+}
+
+.content-text p{
+font-size: 18px;
+line-height: 1.7;
+}
+
+/* contents-img 部分 */
+.content-img{
+width: calc((100%-20px) / 3) * 2 + 10px;
+height: 600px;
+}
+.content-img>img{
+object-fit: cover;
+width: 100%;
+height: 100%;
+}
+
+/* コラム */
+.col-1{
+height: 600px;
+background-color: var(--nav_color);
+text-align: center;
+padding: 180px 20px 20px;
+}
+
+.col-1 h2{
+font-size: 40px;
+margin-bottom: 20px;
+}
+
+.col-1 p{
+font-size: 20px;
+line-height: 1.7;
+}
+
+/* フッター */
+
+footer{
+height: 100px;
+text-align: center;
+background-color: var(--header_color);
+margin-bottom: 10px;
+}
+
+footer p{
+line-height: 100px;
+font-size: 20px;
+}

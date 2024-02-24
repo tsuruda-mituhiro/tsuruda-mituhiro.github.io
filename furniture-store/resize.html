@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title></title>
+ <style>
+ body{
+  background-color: green;
+ }
+ body.move{
+  background-color: rgb(207, 255, 33);
+ }
+ </style>
+</head>
+<body>
+ <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js' integrity='sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw==' crossorigin='anonymous'></script>
+ <script>
+  $(function(){
+   //resize前の幅を取得
+   let windowWidth = $(window).width();
+   //イベントの設定
+   $(window).on('resize lord' ,function(){
+      //resize後の幅を取得
+ 
+
+$('body').addClass('move')
+
+//windowとwwが一致しなかったら
+let ww = $(window).width();
+if(windowWidth != ww){
+//600px以下になったらaddClassで追加する
+if(window.matchMedia('(min-width:900px)').matches){
+   $('body').addClass('move');
+}else{
+   $('body').removeClass('move');
+}
+
+windowWidth = ww;}
+   });
+  });
+
+ </script>
+</body>
+</html>
