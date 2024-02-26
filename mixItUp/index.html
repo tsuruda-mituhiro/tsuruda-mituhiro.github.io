@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>フィルタリング機能とモーダルをセットで実装</title>
+ <link rel="stylesheet" href="css/style.css">
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+</head>
+<body>
+ <h1>フィルタリング機能とモーダルをセットで実装</h1>
+ <div class="container">
+<div class="btn-wrapper">
+<button type="button" data-filter="all">すべて</button>
+<button type="button" data-filter=".auto">フィグマのオートレイアウト</button>
+<button type="button" data-filter=".use">フィグマの使い方</button>
+<button type="button" data-filter=".plug">フィグマのプラグイン</button>
+<button type="button" data-sort="order:asc">人気順</button>
+
+</div><!-- /.btn-wrapper -->
+<div class="contents">
+
+
+<div class="mix auto" data-order="7">
+<a href="https://www.youtube.com/watch?v=R_cYedjFJVY&t=772s" data-fancybox>
+<img src="img/f01.jpg" alt="">
+</a></div>
+
+<div class="mix auto" data-order="5">
+<a href="https://www.youtube.com/watch?v=bPDcUlv7C7A" data-fancybox>
+<img src="img/f02.jpg" alt="">
+</a></div>
+
+<div class="mix auto" data-order="6">
+<a href="https://www.youtube.com/watch?v=GPc6J8czgHs&t=309s" data-fancybox>
+<img src="img/f03.jpg" alt="">
+</a></div>
+
+<div class="mix use" data-order="8">
+<a href="https://www.youtube.com/watch?v=FCI5ZyIx7rY&t=2665s" data-fancybox>
+<img src="img/u1.jpg" alt="">
+</a></div>
+
+<div class="mix use" data-order="2">
+<a href="https://www.youtube.com/watch?v=JuaXJ4DgItY&t=183s" data-fancybox>
+<img src="img/u2.jpg" alt="">
+</a></div>
+
+<div class="mix use" data-order="1">
+<a href="https://www.youtube.com/watch?v=Gt2O4V3Kfxk" data-fancybox>
+<img src="img/u3.jpg" alt="">
+</a></div>
+
+<div class="mix plug" data-order="9">
+<a href="https://www.youtube.com/watch?v=dKwPV8Rh21Y" data-fancybox>
+<img src="img/d1.jpg" alt="">
+</a></div>
+
+<div class="mix plug" data-order="3">
+<a href="https://www.youtube.com/watch?v=lQvHxLmgEmk" data-fancybox>
+<img src="img/d2.jpg" alt="">
+</a></div>
+
+<div class="mix plug" data-order="4">
+<a href="https://www.youtube.com/watch?v=JlEmheItrwA" data-fancybox>
+<img src="img/d3.jpg" alt="">
+</a></div>
+
+     
+
+
+</div><!-- /.contents -->
+
+
+ </div><!-- /.container -->
+ <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js' integrity='sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==' crossorigin='anonymous'></script>
+ <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+ <script src="js/mixitup.js"></script>
+ <script>
+  let mixer = mixitup('.contents');
+ </script>
+</body>
+</html>
